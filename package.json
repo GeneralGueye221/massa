@@ -1,0 +1,39 @@
+{
+    "name": "massa-workspaces-for-toolkit",
+    "version": "0.0.4",
+    "description": "This toolkit is meant to facilitate smart contract development.",
+    "type": "module",
+    "scripts": {
+        "build": "npm run build --ws --if-present",
+        "prettier": "prettier '**/src/**/*.ts' --check && as-prettier --check **/assembly/**",
+        "prettier:fix": "prettier '**/src/**/*.ts' --write && as-prettier --write **/assembly/**",
+        "lint": "eslint .",
+        "lint:fix": "npm run lint -- --fix",
+        "fmt:check": "npm run prettier && npm run lint",
+        "fmt": "npm run prettier:fix && npm run lint:fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/massalabs/massa-sc-toolkit.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/massalabs/massa-sc-toolkit/issues"
+    },
+    "homepage": "https://github.com/massalabs/massa-sc-toolkit#readme",
+    "prettier": "@massalabs/prettier-config-as",
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "@massalabs/eslint-config": "^0.0.9",
+        "@massalabs/massa-sc-compiler": "^0.0.4-dev",
+        "@massalabs/prettier-config-as": "^0.0.2",
+        "prettier": "^2.8.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.9.1",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.4"
+    }
+}

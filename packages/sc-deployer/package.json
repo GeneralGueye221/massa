@@ -1,0 +1,26 @@
+{
+  "name": "@massalabs/massa-sc-deployer",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -d",
+    "postbuild": "npx massa-as-compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@massalabs/as-types": "^0.0.3-dev",
+    "@massalabs/massa-as-sdk": "^2.0.2-dev",
+    "@massalabs/massa-web3": "^1.16.2-dev",
+    "@types/node": "^18.11.10",
+    "assemblyscript": "^0.25.2"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "build"
+  ]
+}
